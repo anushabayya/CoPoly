@@ -36,6 +36,7 @@
             this.FilePath.FormattingEnabled = true;
             this.FilePath.Location = new System.Drawing.Point(-2, 50);
             this.FilePath.Name = "FilePath";
+            this.FilePath.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.FilePath.Size = new System.Drawing.Size(285, 95);
             this.FilePath.TabIndex = 0;
             // 
