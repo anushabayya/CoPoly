@@ -1,6 +1,6 @@
 ﻿namespace MultiplePaste
 {
-    partial class Form1
+    partial class CoPoly
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.FilePath = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // FilePath
+            // 
+            this.FilePath.FormattingEnabled = true;
+            this.FilePath.Location = new System.Drawing.Point(-2, 50);
+            this.FilePath.Name = "FilePath";
+            this.FilePath.Size = new System.Drawing.Size(285, 95);
+            this.FilePath.TabIndex = 0;
+            // 
+            // CoPoly
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.FilePath);
+            this.Name = "CoPoly";
+            this.Text = "CoPoly";
+            this.Load += new System.EventHandler(this.CoPoly_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox FilePath;
     }
 }
 
