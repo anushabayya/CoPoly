@@ -1,0 +1,4 @@
+Windows Registry Editor 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Multiple Paste\command]
+@="C:\\Users\\Anusha\\Documents\\Visual Studio 2017\\Projects\\WindowsFormsApp1\\WindowsFormsApp1\\bin\\Debug\\WindowsFormsApp1.exe"
