@@ -30,5 +30,25 @@ namespace MultiplePaste
                 FilePath.Items.Add(filePath);
             }
         }
+
+        private void Paste_Click(object sender, EventArgs e)
+        {
+            string[] selectedFiles = getSelectedFiles();
+            Paster pasteObj = new Paster(selectedFiles);
+            bool result = pasteObj.pasteFiles();
+        }
+
+        public string[] getSelectedFiles()
+        {
+            int index = 0;
+            string[] selectedFile = new string[FilePath.SelectedIndices.Count];
+            foreach(int iterator in FilePath.SelectedIndices)
+            {
+                string item = FilePath.Items[iterator].ToString();
+                selectedFile[index] = item;
+                index++;
+            }
+            return selectedFile;
+        }
     }
 }

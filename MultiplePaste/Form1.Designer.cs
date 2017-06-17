@@ -29,22 +29,32 @@
         private void InitializeComponent()
         {
             this.FilePath = new System.Windows.Forms.ListBox();
+            this.Paste = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FilePath
             // 
             this.FilePath.FormattingEnabled = true;
-            this.FilePath.Location = new System.Drawing.Point(-2, 50);
+            this.FilePath.Location = new System.Drawing.Point(0, 47);
             this.FilePath.Name = "FilePath";
-            this.FilePath.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.FilePath.Size = new System.Drawing.Size(285, 95);
+            this.FilePath.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.FilePath.Size = new System.Drawing.Size(290, 108);
             this.FilePath.TabIndex = 0;
+            // 
+            // Paste
+            // 
+            this.Paste.Location = new System.Drawing.Point(97, 186);
+            this.Paste.Name = "Paste";
+            this.Paste.Size = new System.Drawing.Size(75, 23);
+            this.Paste.TabIndex = 1;
+            this.Paste.Text = "Paste";
+            this.Paste.UseVisualStyleBackColor = true;
+            this.Paste.Click += new System.EventHandler(this.Paste_Click);
             // 
             // CoPoly
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.Paste);
             this.Controls.Add(this.FilePath);
             this.Name = "CoPoly";
             this.Text = "CoPoly";
@@ -56,6 +66,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox FilePath;
+        private System.Windows.Forms.Button Paste;
     }
 }
 
