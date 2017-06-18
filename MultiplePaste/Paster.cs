@@ -8,16 +8,16 @@ using System.IO;
 
 namespace MultiplePaste
 {
-    class Paster
+    public abstract class Paster
     {
-        private string[] selectedFiles;
+        private List<string> selectedFiles;
 
-        public Paster(string[] files)
+        public Paster(List<string> files)
         {
             selectedFiles = files ;
         }
   
-        public string[] getSelectedFiles()
+        public List<string> getSelectedFiles()
         {
             return selectedFiles;
         }
@@ -25,23 +25,10 @@ namespace MultiplePaste
         public string getCurrentDirectoryPath()
         {
             string path = null;
-            path = System.IO.Directory.GetCurrentDirectory();
+            path = Directory.GetCurrentDirectory();
             return path;
         }
 
-        public bool pasteFiles()
-        {
-            bool result = true;
-            string filename = null,destFile = null;
-            string currentDirectoryPath = getCurrentDirectoryPath();
-            string[] files = getSelectedFiles();
-            foreach(string sourcefilePath in files)
-            {
-                filename = Path.GetFileName(sourcefilePath);
-                destFile = Path.Combine(currentDirectoryPath, filename);
-                File.Copy(sourcefilePath, destFile);
-            }
-            return result;
-        }
+        public abstract bool paste();
     }
 }
